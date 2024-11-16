@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "FieldContent",
+				"value": "height",
+				"type": "Text"
+			},
+			"background": {
+				"__TYPE__": "FieldContent",
+				"value": "#7820f2",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]

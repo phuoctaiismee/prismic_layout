@@ -1,0 +1,26 @@
+{
+  "id": "search_section",
+  "type": "SharedSlice",
+  "name": "SearchSection",
+  "description": "SearchSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Placeholder",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

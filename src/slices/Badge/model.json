@@ -1,0 +1,33 @@
+{
+  "id": "badge",
+  "type": "SharedSlice",
+  "name": "Badge",
+  "description": "Badge",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "background": {
+          "type": "Color",
+          "config": {
+            "label": "Background",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

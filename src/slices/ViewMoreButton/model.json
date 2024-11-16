@@ -1,0 +1,18 @@
+{
+  "id": "view_more_button",
+  "type": "SharedSlice",
+  "name": "ViewMoreButton",
+  "description": "ViewMoreButton",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}

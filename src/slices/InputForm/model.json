@@ -1,0 +1,18 @@
+{
+  "id": "input_form",
+  "type": "SharedSlice",
+  "name": "InputForm",
+  "description": "InputForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}

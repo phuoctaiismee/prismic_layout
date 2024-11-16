@@ -1,0 +1,63 @@
+{
+    "page": "homepage",
+    "sections": [
+        {
+            "id": "hero",
+            "background": {
+                "className": "bg-white"
+            },
+            "layout": {
+                "className": "container mx-auto py-8 w-full flex flex-col gap-5",
+                "childs": [
+                    {
+                        "id": "search_section$ae426d33-f1b7-4c3e-9900-0d0df34bc2f9"
+                    },
+                    {
+                        "id": "filter_sort",
+                        "layout": {
+                            "className": "w-full flex gap-5 items-center justify-between",
+                            "childs": [
+                                {
+                                    "id": "filter_section$5af21442-c88b-44f6-aefc-23fa29444b41"
+                                },
+                                {
+                                    "id": "sort_section$29ce56a8-9605-4d7c-ba7d-9ed9251f1545"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "col": 12,
+            "row": 3,
+            "colspan": 12,
+            "rowspan": 2,
+            "gap": 20,
+            "childs": [
+                {
+                    "sliceId": "heading$77111476-c2b8-46b1-aa27-a39aa243bcc3",
+                    "colspan": 12,
+                    "rowspan": 1
+                },
+                {
+                    "col": 12,
+                    "row": 1,
+                    "colspan": 12,
+                    "childs": [
+                        {
+                            "sliceId": "sub_title$23403e5d-a70c-4356-92c2-99e824033966",
+                            "colspan": 11
+                        }
+                    ]
+                },
+                {
+                    "sliceId": "carousel$c2f78bb9-cfae-4bbc-bcaf-1a29c6ecaca2",
+                    "colspan": 12,
+                    "rowspan": 1
+                }
+            ]
+        }
+    ]
+}

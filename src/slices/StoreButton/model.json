@@ -1,0 +1,30 @@
+{
+  "id": "store_button",
+  "type": "SharedSlice",
+  "name": "StoreButton",
+  "description": "StoreButton",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "type": {
+          "type": "Select",
+          "config": {
+            "label": "Type",
+            "placeholder": "",
+            "options": [
+              "google",
+              "appstore"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

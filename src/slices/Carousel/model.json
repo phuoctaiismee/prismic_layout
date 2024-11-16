@@ -1,0 +1,28 @@
+{
+  "id": "carousel",
+  "type": "SharedSlice",
+  "name": "Carousel",
+  "description": "Carousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "with_control": {
+          "type": "Boolean",
+          "config": {
+            "label": "With Control",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

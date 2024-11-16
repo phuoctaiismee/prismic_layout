@@ -1,0 +1,103 @@
+{
+    "page": "homepage",
+    "container": {
+        "col": 12,
+        "gap": 5,
+        "childs": [
+            {
+                "col": 12,
+                "row": 2,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "childs": [
+                    {
+                        "col": 12,
+                        "colspan": 12,
+                        "childs": [
+                            {
+                                "colspan": 1
+                            },
+                            {
+                                "sliceId": "search_section$ae426d33-f1b7-4c3e-9900-0d0df34bc2f9",
+                                "colspan": 10
+                            },
+                            {
+                                "colspan": 1
+                            }
+                        ]
+                    },
+                    {
+                        "col": 12,
+
+                        "colspan": 12,
+                        "childs": [
+                            {
+                                "col": 12,
+                                "colspan": 12,
+                                "childs": [
+                                    {
+                                        "colspan": 1
+                                    },
+                                    {
+                                        "colspan": 10,
+                                        "childs": [
+                                            {
+                                                "type": "flex",
+                                                "justifyContent": "space-between",
+                                                "alignItems": "center",
+                                                "childs": [
+                                                    {
+                                                        "sliceId": "filter_section$5af21442-c88b-44f6-aefc-23fa29444b41"
+                                                    },
+                                                    {
+                                                        "sliceId": "sort_section$29ce56a8-9605-4d7c-ba7d-9ed9251f1545"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "colspan": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "col": 12,
+                "row": 3,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "childs": [
+                    {"colspan": 1},
+                    {
+                        "sliceId": "heading$77111476-c2b8-46b1-aa27-a39aa243bcc3",
+                        "colspan": 11,
+                        "rowspan": 1
+                    },
+                    {"colspan": 1},
+                    {
+                        "col": 12,
+                        "row": 1,
+                        "colspan": 11,
+                        "childs": [
+                            {
+                                "sliceId": "sub_title$23403e5d-a70c-4356-92c2-99e824033966",
+                                "colspan": 11
+                            }
+                        ]
+                    },
+                    {
+                        "sliceId": "carousel$c2f78bb9-cfae-4bbc-bcaf-1a29c6ecaca2",
+                        "colspan": 12,
+                        "rowspan": 1
+                    }
+                ]
+            }
+        ]
+    }
+}

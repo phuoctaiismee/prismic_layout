@@ -1,0 +1,18 @@
+{
+  "id": "filter_section",
+  "type": "SharedSlice",
+  "name": "FilterSection",
+  "description": "FilterSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}
