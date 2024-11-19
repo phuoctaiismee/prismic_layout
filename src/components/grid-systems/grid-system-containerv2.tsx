@@ -122,7 +122,7 @@ const GridSystemContainerV2 = ({ page, slices }: GridSystemProps) => {
         });
 
         socket.on("return-json", (data) => {
-            console.log("Received webhook event:", data);
+            // alert("Received webhook event: " + JSON.stringify(data));
             setLayout(data)
         });
 
