@@ -15,7 +15,7 @@ export default async function Page() {
     try {
         const response = await fetch(`${CONFIGS.API_URL}/api`);
         if (!response.ok) {
-            throw new Error(`Failed to fetch layout data: ${response.statusText}`);
+            return;
         }
         layoutData = await response.json();
     } catch (error) {
