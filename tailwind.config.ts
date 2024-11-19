@@ -1,5 +1,16 @@
 import type { Config } from "tailwindcss";
 
+const generateGridColsClasses = (breakpoints: string[], maxCols: number) => {
+    return breakpoints.flatMap((bp) =>
+        Array.from({ length: maxCols }, (_, i) => `${bp}:grid-cols-${i + 1}`)
+    );
+};
+
+const generateGapClasses = (breakpoints: string[], maxGap: number) => {
+    return breakpoints.flatMap((bp) =>
+        Array.from({ length: maxGap }, (_, i) => `${bp}:gap-${i + 1}`)
+    );
+};
 export default {
     darkMode: ["class"],
     content: [
@@ -62,6 +73,10 @@ export default {
             "self-stretch",
         ], // Align self
         ...Array.from({ length: 24 }, (_, i) => `gap-${i + 1}`), // Gap utilities
+        // Add dynamic grid cols classes
+        ...generateGridColsClasses(["sm", "md", "lg", "xl", "2xl"], 24),
+        // Add dynamic gap classes
+        ...generateGapClasses(["sm", "md", "lg", "xl", "2xl"], 12),
     ],
     theme: {
         extend: {

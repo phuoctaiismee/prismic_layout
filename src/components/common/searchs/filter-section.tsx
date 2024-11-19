@@ -1,11 +1,11 @@
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {ChevronDown} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const filterOptions = [
     {
@@ -32,7 +32,7 @@ const filterOptions = [
 
 const FilterSectionComp = () => {
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap lg:flex-nowrap items-center gap-2">
             {filterOptions.map((option, index) => (
                 <DropdownMenu key={index}>
                     <DropdownMenuTrigger asChild>

@@ -1,0 +1,18 @@
+{
+  "id": "carousel_explore",
+  "type": "SharedSlice",
+  "name": "CarouselExplore",
+  "description": "CarouselExplore",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}

@@ -19,7 +19,7 @@ const ImageFull = ({slice}: ImageFullProps): JSX.Element => {
             {slice.variation === "default" && (
                 <PrismicImage
                     field={slice.primary.image}
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover"
                 />
             )}
             {slice.variation === "background" && (

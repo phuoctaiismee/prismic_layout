@@ -25,7 +25,7 @@ interface GridItem {
     colspan?: number; // Number of columns to span
     rowspan?: number; // Number of rows to span
     gap?: number; // Gap between items (applies to grid layout)
-    type?: "grid" | "flex"; // Determines if the container is grid or flex
+    type: "grid" | "flex"; // Determines if the container is grid or flex
     justifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly"; // Flexbox alignment on the main axis
     alignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline"; // Flexbox alignment on the cross axis
     style?: React.CSSProperties; // Inline styles for the item

@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type HomepageDocumentDataSlicesSlice =
+  | CarouselExploreSlice
   | InputFormSlice
   | ImageFullSlice
   | PaymentCarouselSlice
@@ -85,6 +86,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | CarouselExploreSlice
   | InputFormSlice
   | ImageFullSlice
   | PaymentCarouselSlice
@@ -393,6 +395,36 @@ type CarouselSliceVariation = CarouselSliceDefault;
 export type CarouselSlice = prismic.SharedSlice<
   "carousel",
   CarouselSliceVariation
+>;
+
+/**
+ * Default variation for CarouselExplore Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselExploreSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *CarouselExplore*
+ */
+type CarouselExploreSliceVariation = CarouselExploreSliceDefault;
+
+/**
+ * CarouselExplore Shared Slice
+ *
+ * - **API ID**: `carousel_explore`
+ * - **Description**: CarouselExplore
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselExploreSlice = prismic.SharedSlice<
+  "carousel_explore",
+  CarouselExploreSliceVariation
 >;
 
 /**
@@ -900,6 +932,9 @@ declare module "@prismicio/client" {
       CarouselSliceDefaultPrimary,
       CarouselSliceVariation,
       CarouselSliceDefault,
+      CarouselExploreSlice,
+      CarouselExploreSliceVariation,
+      CarouselExploreSliceDefault,
       ControlCarouselSlice,
       ControlCarouselSliceVariation,
       ControlCarouselSliceDefault,

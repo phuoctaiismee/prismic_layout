@@ -6,7 +6,7 @@ export const revalidate = 60;
 export async function GET() {
     try {
         // Define the path to the JSON file
-        const filePath = path.join(process.cwd(), 'public', 'mocks', 'layout3.json'); // Adjust if using a different path
+        const filePath = path.join(process.cwd(), 'public', 'mocks', 'layout4.json'); // Adjust if using a different path
 
         // Read and parse the JSON file
         const jsonData = await fs.readFile(filePath, 'utf8');

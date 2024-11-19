@@ -10,10 +10,15 @@
                 "colspan": 12,
                 "rowspan": 2,
                 "gap": 5,
+                "style": {
+                    "paddingBottom": 40,
+                    "borderBottom": "0.5px solid #ccc"
+                },
                 "childs": [
                     {
                         "col": 12,
                         "colspan": 12,
+                        "rowspan": 1,
                         "childs": [
                             {
                                 "colspan": 1
@@ -29,38 +34,32 @@
                     },
                     {
                         "col": 12,
-
                         "colspan": 12,
+                        "rowspan": 1,
                         "childs": [
                             {
-                                "col": 12,
-                                "colspan": 12,
+                                "colspan": 1
+                            },
+                            {
+                                "colspan": 10,
                                 "childs": [
                                     {
-                                        "colspan": 1
-                                    },
-                                    {
-                                        "colspan": 10,
+                                        "type": "flex",
+                                        "justifyContent": "space-between",
+                                        "alignItems": "center",
                                         "childs": [
                                             {
-                                                "type": "flex",
-                                                "justifyContent": "space-between",
-                                                "alignItems": "center",
-                                                "childs": [
-                                                    {
-                                                        "sliceId": "filter_section$5af21442-c88b-44f6-aefc-23fa29444b41"
-                                                    },
-                                                    {
-                                                        "sliceId": "sort_section$29ce56a8-9605-4d7c-ba7d-9ed9251f1545"
-                                                    }
-                                                ]
+                                                "sliceId": "filter_section$5af21442-c88b-44f6-aefc-23fa29444b41"
+                                            },
+                                            {
+                                                "sliceId": "sort_section$29ce56a8-9605-4d7c-ba7d-9ed9251f1545"
                                             }
                                         ]
-                                    },
-                                    {
-                                        "colspan": 1
                                     }
                                 ]
+                            },
+                            {
+                                "colspan": 1
                             }
                         ]
                     }
@@ -72,6 +71,9 @@
                 "colspan": 12,
                 "rowspan": 2,
                 "gap": 5,
+                "style": {
+                    "marginTop": 20
+                },
                 "childs": [
                     {"colspan": 1},
                     {
@@ -91,11 +93,398 @@
                             }
                         ]
                     },
+
                     {
                         "sliceId": "carousel$c2f78bb9-cfae-4bbc-bcaf-1a29c6ecaca2",
                         "colspan": 12,
+                        "rowspan": 1,
+                        "style": {
+                            "padding": "0 20px"
+                        }
+                    }
+                ]
+            },
+            {
+                "col": 12,
+                "row": 3,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "childs": [
+                    {
+                        "col": 12,
+                        "row": 1,
+                        "colspan": 12,
+                        "childs": [
+                            {"colspan": 1},
+                            {
+                                "sliceId": "heading$4efd3171-bcdb-45e2-94c1-50d3a3e62187",
+                                "colspan": 11,
+                                "rowspan": 1
+                            }
+                        ]
+                    },
+                    {
+                        "col": 12,
+                        "row": 1,
+                        "colspan": 12,
+                        "childs": [
+                            {"colspan": 1},
+                            {
+                                "colspan": 10,
+                                "childs": [
+                                    {
+                                        "type": "flex",
+                                        "justifyContent": "space-between",
+                                        "alignItems": "center",
+                                        "childs": [
+                                            {
+                                                "sliceId": "filter_section$5af21442-c88b-44f6-aefc-23fa29444b41"
+                                            },
+                                            {
+                                                "sliceId": "sort_section$29ce56a8-9605-4d7c-ba7d-9ed9251f1545"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {"colspan": 1}
+                        ]
+                    },
+                    {
+                        "col": 12,
+                        "colspan": 12,
+                        "rowspan": 1,
+                        "childs": [
+                            {"colspan": 1},
+                            {
+                                "sliceId": "destination$e8ef9d2b-87a1-495f-ab04-1e48a1708032",
+                                "colspan": 10,
+                                "rowspan": 1
+                            },
+                            {"colspan": 1}
+                        ]
+                    }
+                ]
+            },
+            {
+                "col": 12,
+                "colspan": 12,
+                "style": {
+                    "marginTop": 50
+                },
+                "childs": [
+                    {"colspan": 1},
+                    {
+                        "colspan": 10,
+                        "childs": [
+                            {
+                                "col": 12,
+                                "gap": 20,
+                                "childs": [
+                                    {
+                                        "colspan": 6,
+                                        "col": 12,
+                                        "childs": [
+                                            {
+                                                "col": 12,
+                                                "colspan": 12,
+                                                "gap": 5,
+                                                "childs": [
+                                                    {
+                                                        "sliceId": "image_full$174e17c4-c36c-46ee-98b0-77d7701b0976",
+                                                        "colspan": 6,
+                                                        "style": {
+                                                            "borderRadius": 20,
+                                                            "overflow": "hidden"
+                                                        }
+                                                    },
+                                                    {
+                                                        "col": 12,
+                                                        "row": 1,
+                                                        "colspan": 6,
+                                                        "gap": 5,
+                                                        "childs": [
+                                                            {
+                                                                "sliceId": "image_full$c431a6d3-c9d0-4ca1-a122-9233662df34c",
+                                                                "colspan": 12,
+                                                                "style": {
+                                                                    "borderRadius": 20,
+                                                                    "overflow": "hidden"
+                                                                }
+                                                            },
+                                                            {
+                                                                "sliceId": "image_full$8d23703c-6fc9-4e92-b9fd-cf51a9c81194",
+                                                                "colspan": 12,
+                                                                "style": {
+                                                                    "borderRadius": 20,
+                                                                    "overflow": "hidden"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "col": 12,
+                                        "colspan": 6,
+                                        "row": 1,
+                                        "style": {
+                                            "placeSelf": "center"
+                                        },
+                                        "childs": [
+                                            {
+                                                "sliceId": "badge$de7c056d-2c83-4087-b35e-ce7f7a308861",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "heading$6219f74b-9e2b-413b-951c-fdeb44cb1674",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "sub_title$94d3a31f-0789-4496-93b3-e0c7639bfd77",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "payment_carousel$eb05830e-4190-4c57-8178-cd6bc078d4ec",
+                                                "colspan": 8
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {"colspan": 1}
+                ]
+            },
+            {
+                "col": 12,
+                "row": 3,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "style": {
+                    "backgroundImage": "url(/bg.png)",
+                    "backgroundSize": "cover",
+                    "backgroundColor": "#fff0ec",
+                    "backgroundRepeat": "no-repeat",
+                    "backgroundPosition": "top",
+                    "padding": "3rem 20px"
+                },
+                "childs": [
+                    {"colspan": 1},
+                    {
+                        "colspan": 10,
+                        "childs": [
+                            {
+                                "type": "flex",
+                                "justifyContent": "space-between",
+                                "alignItems": "center",
+                                "childs": [
+                                    {
+                                        "col": 12,
+                                        "row": 1,
+
+                                        "childs": [
+                                            {
+                                                "sliceId": "heading$9fb9849c-c2d0-4646-832a-0aa1f4595d2f",
+                                                "colspan": 12,
+                                                "rowspan": 1
+                                            },
+                                            {
+                                                "sliceId": "sub_title$146a07fb-8f9f-4d05-9c78-ee1faf3f31e7",
+                                                "colspan": 12
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "sliceId": "view_more_button$7bf9158e-3bec-4e21-a42d-2447da568b10"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {"colspan": 1},
+                    {
+                        "sliceId": "carousel$fb8d4662-e031-4df0-bfb3-62bd826ef2f4",
+                        "colspan": 12,
                         "rowspan": 1
                     }
+                ]
+            },
+            {
+                "col": 12,
+                "row": 3,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "style": {
+                    "padding": "3rem 0"
+                },
+                "childs": [
+                    {"colspan": 1},
+                    {
+                        "colspan": 10,
+                        "childs": [
+                            {
+                                "type": "flex",
+                                "justifyContent": "center",
+                                "alignItems": "center",
+                                "childs": [
+                                    {
+                                        "col": 12,
+                                        "row": 1,
+                                        "gap": 5,
+                                        "childs": [
+                                            {
+                                                "sliceId": "badge$e8cba70f-9a2a-4a59-836c-2f3c3627e979",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "heading$ee7d46bc-c681-4f84-85db-b460e9383a54",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "sub_title$3a28ed50-212c-4a0d-a50d-9354eaab5f04",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "col": 12,
+                                                "row": 1,
+                                                "colspan": 8,
+                                                "childs": [
+                                                    {
+                                                        "sliceId": "store_button$418f3a2c-5aac-427d-9728-302e837c278f",
+                                                        "colspan": 6
+                                                    },
+                                                    {
+                                                        "sliceId": "store_button$f89ebd4e-b304-4f3f-9540-8453aac70969",
+                                                        "colspan": 6
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "col": 12,
+                                        "row": 1,
+                                        "gap": 5,
+                                        "childs": [
+                                            {
+                                                "col": 12,
+                                                "row": 1,
+                                                "colspan": 6,
+                                                "gap": 5,
+                                                "style": {
+                                                    "marginTop": 20
+                                                },
+                                                "childs": [
+                                                    {
+                                                        "sliceId": "card_background$82539a5e-3496-45c9-a7da-1bd54072f650",
+                                                        "colspan": 12
+                                                    },
+                                                    {
+                                                        "sliceId": "card_background$cd5260fd-12df-4854-b868-d9a7a31aa8a0",
+                                                        "colspan": 12
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "col": 12,
+                                                "row": 1,
+                                                "colspan": 6,
+                                                "gap": 5,
+                                                "childs": [
+                                                    {
+                                                        "sliceId": "card_background$40d5edfb-59b6-45c7-9b95-45b600b94050",
+                                                        "colspan": 12
+                                                    },
+                                                    {
+                                                        "sliceId": "card_background$72604608-3e01-40d0-bea4-bea3e7dffbfd",
+                                                        "colspan": 12
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {"colspan": 1}
+                ]
+            },
+            {
+                "col": 12,
+                "row": 1,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+                "style": {
+                    "padding": "3rem 20px"
+                },
+                "childs": [
+                    {
+                        "sliceId": "carousel_explore$37409ed0-a162-4089-8a11-d3d7722af635",
+                        "colspan": 12
+                    }
+                ]
+            },
+            {
+                "col": 12,
+                "row": 3,
+                "colspan": 12,
+                "rowspan": 2,
+                "gap": 5,
+
+                "childs": [
+                    {"colspan": 1},
+                    {
+                        "colspan": 10,
+                        "style": {
+                            "overflow": "hidden",
+                            "borderRadius": 50,
+                            "backgroundColor": "#e3f0ff"
+                        },
+                        "childs": [
+                            {
+                                "type": "flex",
+                                "justifyContent": "space-between",
+                                "alignItems": "center",
+                                "childs": [
+                                    {
+                                        "col": 12,
+                                        "style": {
+                                            "padding": 30,
+                                            "minWidth": "50%"
+                                        },
+                                        "gap": 5,
+                                        "childs": [
+                                            {
+                                                "sliceId": "badge$dd7767e0-2b4c-4cfd-8de1-a674602d81ca",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "heading$b0eedff3-5a1f-40ed-8f1b-a419d680d585",
+                                                "colspan": 12
+                                            },
+                                            {
+                                                "sliceId": "input_form$bedf1e51-19ed-43b4-a1b2-4039935b0546",
+                                                "colspan": 12
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "sliceId": "image_full$b50a1983-04ec-4334-aefc-6918e4f17a62"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {"colspan": 1}
                 ]
             }
         ]

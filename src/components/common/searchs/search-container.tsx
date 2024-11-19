@@ -1,11 +1,11 @@
 "use client";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Search} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 const SearchContainer = () => {
     return (
-        <form className="grid grid-cols-12 rounded-full border border-neutral-200 w-full overflow-hidden">
+        <form className="grid grid-cols-1 lg:grid-cols-12 rounded-full border border-neutral-200 w-full overflow-hidden">
             <div className="col-span-7 pl-6 bg-neutral-100 w-full h-full">
                 <div className="flex items-center h-full">
                     <Search className="w-6 h-6 text-neutral-700" />

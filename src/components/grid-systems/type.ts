@@ -5,8 +5,6 @@ interface GridItem {
     row: number; // Position within the container
     colspan?: number; // Spanning columns in the container
     rowspan?: number; // Spanning rows in the container'
-    colStart?: number,
-    rowStart?: number,
     gap?: number; // Length of
     childs?: GridItem[]; // Child components (can be recursively nested)
     style?: CSSStyleDeclaration

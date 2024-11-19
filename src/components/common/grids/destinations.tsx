@@ -62,7 +62,7 @@ const destinations = [
 ];
 const Destinations = () => {
     return (
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
             {destinations.map((des, index) => (
                 <div
                     className="border p-4 rounded-3xl hover:-translate-y-1 transition-transform duration-150"

@@ -1,28 +1,39 @@
-import {Metadata} from "next";
-
-import {createClient} from "@/prismicio";
-import GridSystemContainer from "@/components/grid-systems/grid-system-container";
-import GlobalContainer from "@/components/grid-systems/global-container";
-import {Fragment} from "react";
-import dynamic from "next/dynamic";
-
-const GridSystemContainerV2 = dynamic(
-    import("@/components/grid-systems/grid-system-containerv2")
-);
+import { Metadata } from "next";
+import { createClient } from "@/prismicio";
+import GridSystemContainerV2 from "@/components/grid-systems/grid-system-containerv2";
+import { Fragment } from "react";
+import { CONFIGS } from "@/configs";
 
 export default async function Page() {
     const client = createClient();
-    const page = await client.getSingle("homepage");
-    // console.log("🚀 ~ Page ~ page:", page.data.slices);
 
-    // return <SliceZone slices={page.data.slices} components={components} />;
-    // return <GridSystemContainer {...page.data} />;
+    // Fetch Prismic data
+    const page = await client.getSingle("homepage");
+
+    // Fetch layout data
+    let layoutData;
+    try {
+        const response = await fetch(`${CONFIGS.API_URL}/api`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch layout data: ${response.statusText}`);
+        }
+        layoutData = await response.json();
+    } catch (error) {
+        console.error("Error fetching layout data:", error);
+        layoutData = { defaultLayout: true }; // Fallback data
+    }
+
+    console.log("🚀 ~ Page ~ layoutData:", layoutData);
+
+    if (!page || !layoutData) {
+        return <div>Error loading page data</div>;
+    }
+
     return (
         <Fragment>
-            <GridSystemContainerV2 {...page.data} />
+            <GridSystemContainerV2 page={layoutData} {...page.data} />
         </Fragment>
     );
-    // return <GlobalContainer {...page.data} />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {

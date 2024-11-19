@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "carousel_explore": {
+              "type": "SharedSlice"
+            },
             "input_form": {
               "type": "SharedSlice"
             },

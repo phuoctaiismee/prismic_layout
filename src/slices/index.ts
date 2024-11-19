@@ -6,6 +6,7 @@ export const components = {
   badge: dynamic(() => import("./Badge")),
   card_background: dynamic(() => import("./CardBackground")),
   carousel: dynamic(() => import("./Carousel")),
+  carousel_explore: dynamic(() => import("./CarouselExplore")),
   control_carousel: dynamic(() => import("./ControlCarousel")),
   destination: dynamic(() => import("./Destination")),
   filter_section: dynamic(() => import("./FilterSection")),
