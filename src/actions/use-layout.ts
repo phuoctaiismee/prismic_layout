@@ -19,7 +19,7 @@ export async function getLayoutDataAPI() {
     try {
         const response = await fetch(`${CONFIGS.API_URL}/api`);
         if (!response.ok) {
-            throw new Error(`Failed to fetch: ${response.statusText}`);
+            return;
         }
         return await response.json();
     } catch (error) {
