@@ -6,7 +6,7 @@ import { Content } from "@prismicio/client";
 import { CONFIGS } from "@/configs";
 import { componentRegistry } from "@/lib/slices";
 import { GridItem, mapJustifyContent, GridCol, SpanCol, SpanRow } from ".";
-import Loading from "../common/loaders/loading";
+import Loading from "@/components/common/loaders/loading";
 
 interface GridSystemProps
     extends Content.HomepageDocumentData,
