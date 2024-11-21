@@ -8,24 +8,8 @@ import { getLayoutDataAPI } from "@/actions/use-layout";
 export default async function Page() {
     const client = createClient();
 
-    // Fetch Prismic data
     const page = await client.getSingle("homepage");
     const layoutData = await getLayoutDataAPI();
-    // // Fetch layout data
-    // let layoutData;
-    // try {
-    //     const response = await fetch(`${CONFIGS.API_URL}/api`);
-    //     if (!response.ok) {
-    //         return;
-    //     }
-    //     layoutData = await response.json();
-    // } catch (error) {
-    //     console.error("Error fetching layout data:", error);
-    //     layoutData = { defaultLayout: true }; // Fallback data
-    // }
-
-    // console.log("🚀 ~ Page ~ layoutData:", layoutData);
-
     if (!page || !layoutData) {
         return <div>Error loading page data</div>;
     }

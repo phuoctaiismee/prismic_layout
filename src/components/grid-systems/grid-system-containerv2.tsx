@@ -1,21 +1,23 @@
-'use client'
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { io } from "socket.io-client";
 import { Content } from "@prismicio/client";
-import { componentRegistry } from "@/lib/slices";
-import { GridItem, mapJustifyContent } from ".";
-import { GridCol, SpanCol, SpanRow } from ".";
-import { useEffect, useState } from "react";
-import { io } from 'socket.io-client'
 import { CONFIGS } from "@/configs";
-import { ContainerConfig } from "./type";
+import { componentRegistry } from "@/lib/slices";
+import { GridItem, mapJustifyContent, GridCol, SpanCol, SpanRow } from ".";
+import Loading from "../common/loaders/loading";
+
 interface GridSystemProps
     extends Content.HomepageDocumentData,
     Content.PageDocumentData {
-    page?: ContainerConfig
+    page?: GridItem;
 }
 
 type SliceItemsType =
     | Content.HomepageDocumentDataSlicesSlice
     | Content.PageDocumentDataSlicesSlice;
+
 const RenderSlice = ({
     slice,
     slices,
@@ -23,28 +25,20 @@ const RenderSlice = ({
     slice: GridItem | null | undefined;
     slices: SliceItemsType[];
 }) => {
-    const key = slice?.sliceId?.split("$")[0];
+    const key = slice?.id?.split("$")[0];
     const SliceComponent = componentRegistry[key as keyof typeof componentRegistry];
-    const data = slices.find((sli) => sli.id === slice?.sliceId) || null;
+    const data = slices.find((sli) => sli.id === slice?.id) || null;
 
     const sliceClasses = [
-        slice?.colspan ? SpanCol(slice.colspan) : "",
-        slice?.rowspan ? SpanRow(slice.rowspan) : "",
+        slice?.colspan ? SpanCol(Number(slice.colspan)) : "",
+        slice?.rowspan ? SpanRow(Number(slice.rowspan)) : "",
     ]
         .filter(Boolean)
         .join(" ");
 
-    // Xử lý chỉ lấy style hợp lệ
-    const inlineStyles = {
-        ...(slice?.style || {}),
-        borderBottom:
-            slice?.style?.borderBottom && !slice.childs
-                ? slice.style.borderBottom
-                : undefined, // Chỉ áp dụng border cho slice không có con
-        paddingBottom:
-            slice?.style?.paddingBottom && !slice.childs
-                ? slice.style.paddingBottom
-                : undefined, // Chỉ áp dụng padding nếu không có con
+    const inlineStyles: React.CSSProperties = {
+        ...slice?.style || {},
+
     };
 
     const content =
@@ -76,29 +70,22 @@ const RenderGrid = ({
 }) => {
     const isFlex = config?.type === "flex";
 
-    // Áp dụng class và style dựa trên type
     const containerClasses = isFlex
         ? [
-            "flex",
-            "w-full",
-            "flex-col",
-            "lg:flex-row",
+            "flex w-full",
+            "flex-col lg:flex-row",
             mapJustifyContent(config.justifyContent),
             config.alignItems ? `items-${config.alignItems}` : "",
-            config.gap ? `gap-${config.gap}` : "",
+            config.gap ? `gap-${Number(config.gap)}` : "",
         ]
         : [
-            "grid",
-            "grid-cols-1",
-            config?.col ? `lg:${GridCol(config.col)}` : "",
-            config?.gap ? `gap-${config.gap}` : "",
+            "grid grid-cols-1",
+            config?.columns ? `lg:${GridCol(Number(config.columns))}` : "",
+            config?.gap ? `gap-${Number(config.gap)}` : "",
         ];
 
     const combinedClasses = containerClasses.filter(Boolean).join(" ");
-
-    const inlineStyles = {
-        ...(config?.style || {}),
-    };
+    const inlineStyles: React.CSSProperties = { ...config?.style };
 
     const content = items.map((item, index) => (
         <RenderSlice key={index} slice={item} slices={slices} />
@@ -111,10 +98,10 @@ const RenderGrid = ({
     );
 };
 
-// Main component
 const GridSystemContainerV2 = ({ page, slices }: GridSystemProps) => {
+    const [layout, setLayout] = useState<GridItem | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const [layout, setLayout] = useState<any>();
     useEffect(() => {
         const socket = io(CONFIGS.SOCKET_URL, {
             withCredentials: true,
@@ -122,29 +109,30 @@ const GridSystemContainerV2 = ({ page, slices }: GridSystemProps) => {
         });
 
         socket.on("return-json", (data) => {
-            // alert("Received webhook event: " + JSON.stringify(data));
-            setLayout(data)
+            if (data) {
+                setIsLoading(true);
+                setLayout(data);
+                setTimeout(() => setIsLoading(false), 2000);
+            }
         });
 
-        // Cleanup khi component unmount
         return () => {
             socket.disconnect();
         };
     }, []);
+
+    const config = layout || page;
+
     return (
         <div className="mx-auto py-5">
-            {page?.container?.childs || layout?.childs ? (
-                <RenderGrid
-                    config={layout || page?.container}
-                    slices={slices}
-                    items={(layout || page?.container).childs}
-                />
+            {config?.childs ? (
+                <RenderGrid config={config} slices={slices} items={config.childs} />
             ) : (
                 <div>Layout data not found</div>
             )}
+            <Loading isLoading={isLoading} />
         </div>
     );
-
 };
 
 export default GridSystemContainerV2;
