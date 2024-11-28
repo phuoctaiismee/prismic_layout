@@ -201,6 +201,13 @@ export default {
                 "23": "23",
                 "24": "24",
             },
+            keyframes: {
+                shimmer: {
+                    '100%': {
+                        transform: 'translateX(100%)',
+                    },
+                },
+            },
         }
     },
     plugins: [require("tailwindcss-animate")],
